@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   db:
     image: mysql:5.7
@@ -21,6 +19,8 @@ services:
       - 8000:80
     restart: always
     links:
+      - db
+    depends_on:
       - db
 
 volumes:
