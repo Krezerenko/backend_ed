@@ -1,0 +1,10 @@
+services:
+  web_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./html/:/var/www/html/
+    ports:
+      - 8000:80
+    restart: always
