@@ -1,6 +1,6 @@
 ﻿<?php
 
-function mergeSort(array $arr)
+function mergeSort(array $arr): array
 {
     $length = count($arr);
     if ($length <= 1) return $arr;
@@ -15,7 +15,7 @@ function mergeSort(array $arr)
     return merge($left, $right);
 }
 
-function merge(array $left, array $right)
+function merge(array $left, array $right): array
 {
     $result = [];
     $i = 0;
@@ -27,8 +27,7 @@ function merge(array $left, array $right)
         {
             $result[] = $left[$i];
             $i++;
-        }
-        else
+        } else
         {
             $result[] = $right[$j];
             $j++;
@@ -50,7 +49,7 @@ function merge(array $left, array $right)
     return $result;
 }
 
-echo "<p>Initial values: ".$_GET["nums"]."</p>";
+echo "<p>Initial values: " . $_GET["nums"] . "</p>";
 $nums = explode(",", $_GET["nums"]);
 
 $nums = mergeSort($nums);

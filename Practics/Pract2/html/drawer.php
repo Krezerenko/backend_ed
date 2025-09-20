@@ -16,12 +16,6 @@ $x = getNextField($num, $mask);
 $y = getNextField($num, $mask);
 $v1 = getNextField($num, $mask);
 $v2 = getNextField($num, $mask);
-error_log($fig);
-//error_log($x);
-//error_log($y);
-//error_log($v1);
-//error_log($v2);
-
 
 $width = 256;
 $height = 256;
@@ -54,17 +48,11 @@ else if ($fig > 0)
         {
             $nextX = getNextField($num, $mask);
             $nextY = getNextField($num, $mask);
-//            error_log($nextX);
-//            error_log($nextY);
             array_push($arr, $nextX, $nextY);
         }
         imagefilledpolygon($image, $arr, $figureColor);
     }
 }
-
-imagesetpixel($image, 0, 0, $figureColor);
-imagesetpixel($image, 127, 127, $figureColor);
-imagesetpixel($image, 255, 255, $figureColor);
 
 header('Content-Type: image/png');
 
