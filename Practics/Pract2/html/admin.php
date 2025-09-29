@@ -30,7 +30,7 @@ function executeCommand($command): string
 Идентификатор пользователя: <?php echo executeCommand('id'); ?>
     </pre>
 
-    <h3>Дисковое пространство</h3>
+        <h3>Дисковое пространство</h3>
     <pre>
 <?php echo executeCommand('df -h'); ?>
     </pre>

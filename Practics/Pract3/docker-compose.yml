@@ -1,0 +1,46 @@
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./www:/var/www/autoservice:ro
+      - ./nginx/nginx.conf:/etc/nginx.conf:ro
+    depends_on:
+      - apache
+    networks:
+      - app-network
+
+  apache:
+    build: ./apache
+    volumes:
+      - ./www:/var/www/autoservice
+      - ./apache/000-default.conf:/etc/apache2/sites-available/000-default.conf:ro
+    depends_on:
+      - mysql
+    networks:
+      - app-network
+  
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: autoservice
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_CHARSET: utf8mb4
+      MYSQL_COLLATION: utf8mb4_unicode_ci
+    command:
+      - --skip-character-set-client-handshake
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - app-network
+
+volumes:
+  dbdata:
+
+networks:
+  app-network:

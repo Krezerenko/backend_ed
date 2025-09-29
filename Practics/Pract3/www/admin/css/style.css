@@ -1,0 +1,161 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Стили формы входа */
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-box button:hover {
+    background: #0056b3;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.demo-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e7f3ff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Стили админ-панели */
+.admin-panel {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.admin-panel header {
+    background: #343a40;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    font-size: 14px;
+}
+
+.logout {
+    color: #ff6b6b;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.quick-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 20px;
+    background: #f8f9fa;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.recent, .quick-links {
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.recent h3, .quick-links h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+table th {
+    background: #f8f9fa;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.links button {
+    padding: 10px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.links button:hover {
+    background: #218838;
+}
