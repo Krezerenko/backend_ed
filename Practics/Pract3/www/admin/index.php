@@ -16,7 +16,7 @@ $username = $_SERVER['PHP_AUTH_USER'] ?? 'Пользователь';
         <p>Добро пожаловать в панель управления автосервисом</p>
 
         <div class="user-info">
-            🔐 Вы вошли как: <strong><?php echo htmlspecialchars($username); ?></strong>
+            Вы вошли как: <strong><?php echo htmlspecialchars($username); ?></strong>
         </div>
 
         <p>Доступ к админ-панели подтвержден</p>
