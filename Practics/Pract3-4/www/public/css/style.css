@@ -1,4 +1,4 @@
-﻿/* Сброс и базовые стили */
+/* Сброс и базовые стили */
 * {
     margin: 0;
     padding: 0;
@@ -227,3 +227,56 @@ footer {
 .mt-2 { margin-top: 2rem; }
 .mb-2 { margin-bottom: 2rem; }
 .p-2 { padding: 2rem; }
+
+body.dark {
+    background: #1e272e;
+    color: #ecf0f1;
+}
+
+body.dark header {
+    background: #0d1117;
+}
+
+body.dark .service-card,
+body.dark #appointment,
+body.dark #user-preferences,
+body.dark #upload-section {
+    background: #2c3e50;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+body.dark .service-card h3,
+body.dark #appointment h2,
+body.dark #user-preferences h2,
+body.dark #upload-section h2 {
+    color: #ffffff;
+}
+
+body.dark .service-card p {
+    color: #bdc3c7;
+}
+
+body.dark .form-group label {
+    color: #ecf0f1;
+}
+
+body.dark .form-group input,
+body.dark .form-group select {
+    background-color: #34495e;
+    border-color: #7f8c8d;
+    color: #ecf0f1;
+}
+
+/* Стили для формы настроек */
+#user-preferences, #upload-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 3rem 0;
+}
+#user-preferences h2, #upload-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}

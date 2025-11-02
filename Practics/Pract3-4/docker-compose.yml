@@ -19,6 +19,7 @@ services:
       - ./apache/000-default.conf:/etc/apache2/sites-available/000-default.conf:ro
     depends_on:
       - mysql
+      - redis
     networks:
       - app-network
   
@@ -36,6 +37,11 @@ services:
     volumes:
       - dbdata:/var/lib/mysql
       - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - app-network
+
+  redis:
+    image: redis:alpine
     networks:
       - app-network
 
