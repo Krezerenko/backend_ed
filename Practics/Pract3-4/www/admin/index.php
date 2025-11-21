@@ -22,7 +22,13 @@ $username = $_SERVER['PHP_AUTH_USER'] ?? 'Пользователь';
         <p>Доступ к админ-панели подтвержден</p>
         <p>Время входа: <?php echo date('d.m.Y H:i:s'); ?></p>
 
-        <a href="/" class="back-link">← Вернуться на главную</a>
+
+        <div class="links">
+            <a href="/" class="back-link">← Вернуться на главную</a>
+
+            <a href="generate_fixtures.php"><button style="background: #17a2b8;">Генерация данных</button></a>
+            <a href="statistics.php"><button style="background: #6f42c1;">Статистика (Графики)</button></a>
+        </div>
     </div>
 </body>
 </html>

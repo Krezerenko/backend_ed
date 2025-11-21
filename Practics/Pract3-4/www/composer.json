@@ -1,0 +1,6 @@
+{
+    "require": {
+        "fakerphp/faker": "@dev",
+        "mitoteam/jpgraph": "@dev"
+    }
+}

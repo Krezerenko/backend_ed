@@ -32,3 +32,11 @@ INSERT INTO services (name, description, price, duration, category) VALUES
 ('Диагностика подвески', 'Полная диагностика ходовой части', 35.00, 30, 'Диагностика'),
 ('Замена аккумулятора', 'Замена автомобильного аккумулятора', 30.00, 30, 'Электрика'),
 ('Замена свечей зажигания', 'Замена комплекта свечей зажигания', 45.00, 40, 'Двигатель');
+
+CREATE TABLE IF NOT EXISTS order_stats (
+    id INT AUTO_INCREMENT PRIMARY KEY, customer_name VARCHAR (100),
+    service_category VARCHAR (50),
+    order_date DATE,
+    revenue DECIMAL (10, 2),
+    status ENUM ('completed', 'canceled', 'refunded')
+);
