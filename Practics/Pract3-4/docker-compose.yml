@@ -14,9 +14,11 @@ services:
 
   apache:
     build: ./apache
+    working_dir: /var/www/autoservice
     volumes:
       - ./www:/var/www/autoservice
       - ./apache/000-default.conf:/etc/apache2/sites-available/000-default.conf:ro
+      - /var/www/autoservice/vendor
     depends_on:
       - mysql
       - redis
@@ -36,7 +38,6 @@ services:
       - --skip-character-set-client-handshake
     volumes:
       - dbdata:/var/lib/mysql
-      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - app-network
 
